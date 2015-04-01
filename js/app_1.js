@@ -22,5 +22,5 @@ featureLayer.on('ready', function(){
     'weight':4,
     'opacity':.7
   });
-  map.fitbounds(featurelayer.getbounds());
+  map.fitBounds(featurelayer.getBounds());
 });
