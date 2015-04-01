@@ -16,7 +16,7 @@ var dataFileToAdd = 'data/test.geojson';
 var featurelayer = L.mapbox.featurelayer().loadURL(dataFileToAdd).addTo(map);
 
 featureLayer.on('ready',function(){
-  this.setstyle({
+  this.setStyle({
     'color':"#ec008c",
     'fillcolor':'#ec008c',
     'weight':4,
