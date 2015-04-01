@@ -6,7 +6,7 @@ var token = 'pk.eyJ1IjoiY2hyaXNkaXZlbHkiLCJhIjoiVkE5a2FTayJ9.Nxm6_TKyp0a1CTKuj0t
 
 //Create the map object with your mapId and token
 L.mapbox.accessToken = token;
-var map = L.mapbox.map('map', chrisdively.25bdc8f3);
+var map = L.mapbox.map('map', 'chrisdively.25bdc8f3');
 
 //Set the view of the map to the whole US
 map.setView([39, -96], 4);
