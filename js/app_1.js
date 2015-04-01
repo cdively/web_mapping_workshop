@@ -11,9 +11,9 @@ var map = L.mapbox.map('map', 'chrisdively.25bdc8f3');
 //Set the view of the map to the whole US
 map.setView([39, -96], 4);
 
-var datafiletoadd = 'data/test.geojson';
+var dataFileToAdd = 'data/test.geojson';
 
-var featurelayer = L.mapbox.featurelayer().loadurl (datafiletoadd).addTo(map);
+var featurelayer = L.mapbox.featurelayer().loadURL(dataFileToAdd).addTo(map);
 
 featureLayer.on('ready',function(){
   this.setstyle({
