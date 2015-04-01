@@ -11,7 +11,7 @@ var map = L.mapbox.map('map', 'chrisdively.25bdc8f3');
 //Set the view of the map to the whole US
 map.setView([39, -96], 4);
 
-var dataFileToAdd = 'data/test.geojson';
+var dataFileToAdd = 'data/bike_routes.geojson';
 
 var featurelayer = L.mapbox.featurelayer().loadURL(dataFileToAdd).addTo(map);
 
