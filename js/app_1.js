@@ -30,3 +30,4 @@ featureLayer.on ('ready',function(){
     layer.bindPopup('Hi, I'm the US.' + layer.feature.properties.STATE_NAME);
   });
 });
+
