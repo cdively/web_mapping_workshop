@@ -27,7 +27,7 @@ featureLayer.on('ready',function(){
 
 featureLayer.on ('ready',function(){
   this.eachlayer(function(layer){
-    layer.bindPopup('Hi, I'm the US.' + layer.feature.properties.STATE_NAME);
+    layer.bindPopup('Hi, I'm the US' + layer.feature.properties.STATE_NAME);
   });
 });
 
