@@ -24,10 +24,38 @@ featureLayer.on('ready',function(){
   });
   map.fitBounds(featureLayer.getBounds());
 });
+// 
+// featureLayer.on ('ready',function(){
+//   this.eachLayer(function(layer){
+//     layer.bindPopup('Hi Im the State Called ' + layer.feature.properties.STATE_NAME);
+//   });
+// });
+// //
+map.on('click',function(e){
+	$('#info').fadeOut(200);
+    $('#info').empty();
+});
 
-featureLayer.on ('ready',function(){
+// Use this function to handle the click event on the data
+var clickHandler = function(e){
+  $('#info').empty();
+
+  //e is the click event that is moving up in the browser, it's target is our element that was clicked
+  var feature = e.target.feature;
+
+  $('#info').fadeIn(400,function(){
+    var info = '';
+
+    info = '<div>Sweet bike route named ' + feature.properties.STATE_NAME + '</div>';
+
+    $('#info').append(info);
+  });
+};
+
+// Register the click event on each of the features in the map
+featureLayer.on('ready', function(){
   this.eachLayer(function(layer){
-    layer.bindPopup('Hi Im the State Called ' + layer.feature.properties.STATE_NAME);
+    layer.on('click', clickHandler);
   });
 });
 
