@@ -13,9 +13,9 @@ map.setView([39, -96], 4);
 
 var datafiletoadd = 'data/test.geojson';
 
-var featurelayer = L.mapbox.featurelayer().loadurl (datafiletoadd).addto(map);
+var featurelayer = L.mapbox.featurelayer().loadurl (datafiletoadd).addTo(map);
 
-featureLayer.on('ready', function(){
+featureLayer.on('ready',function(){
   this.setstyle({
     'color':"#ec008c",
     'fillcolor':'#ec008c',
