@@ -13,12 +13,12 @@ map.setView([39, -96], 4);
 
 var dataFileToAdd = 'data/test.geojson';
 
-var featurelayer = L.mapbox.featurelayer().loadURL(dataFileToAdd).addTo(map);
+var featureLayer = L.mapbox.featureLayer().loadURL(dataFileToAdd).addTo(map);
 
 featureLayer.on('ready',function(){
   this.setStyle({
     'color':"#ec008c",
-    'fillcolor':'#ec008c',
+    'fillColor':'#ec008c',
     'weight':4,
     'opacity':.7
   });
