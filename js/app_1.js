@@ -26,7 +26,7 @@ featureLayer.on('ready',function(){
 });
 
 featureLayer.on ('ready',function(){
-  this.eachlayer(function(layer){
+  this.eachLayer(function(layer){
     layer.bindPopup('Hi Im the State Called' + layer.feature.properties.STATE_NAME);
   });
 });
