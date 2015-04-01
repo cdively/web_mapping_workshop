@@ -10,3 +10,17 @@ var map = L.mapbox.map('map', 'chrisdively.25bdc8f3');
 
 //Set the view of the map to the whole US
 map.setView([39, -96], 4);
+
+var datafiletoadd = 'data/test.geojson';
+
+var featurelayer = L.mapbox.featurelayer().loadurl (datafiletoadd).addto(map);
+
+featureLayer.on('ready', function(){
+  this.setstyle({
+    'color':"#ec008c",
+    'fillcolor':'#ec008c',
+    'weight':4,
+    'opacity':.7
+  });
+  map.fitbounds(featurelayer.getbounds());
+});
