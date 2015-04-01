@@ -24,3 +24,9 @@ featureLayer.on('ready',function(){
   });
   map.fitBounds(featureLayer.getBounds());
 });
+
+featureLayer.on ('ready',function(){
+  this.eachlayer(function(layer){
+    layer.bindPopup('Hi, I'm the US.' + layer.feature.properties.STATE_NAME);
+  });
+});
